@@ -11,7 +11,7 @@ $app = new \Slim\App;
 
 //echo "Created now Slim app instance....";
 $model = new Model();
-$model->init("localhost", "root", "root", "A3v2"); 
+$model->init("localhost", "root", "saz8erX9", "A3"); 
 
 //Get all students
 $app->get('/api/students', function(Request $request, Response $response) use ($model) {
@@ -25,7 +25,6 @@ $app->get('/api/students', function(Request $request, Response $response) use ($
 $app->get('/api/students/{id}', function(Request $request, Response $response) use ($model) {
 
     $id = $request->getAttribute('id');
-    echo "GET STUDENT CALLED";
     $student = $model->get_student($id);
     $response->getBody()->write($student);
     return $response;
