@@ -11,7 +11,7 @@ $app = new \Slim\App;
 
 //echo "Created now Slim app instance....";
 $model = new Model();
-$model->init("localhost", "root", "saz8erX9", "A3"); 
+$model->init("localhost", "root", "root", "A3"); //PUT DATABASE AND PASSWORD HERE!!!! 
 
 //Get all students
 $app->get('/api/students', function(Request $request, Response $response) use ($model) {
